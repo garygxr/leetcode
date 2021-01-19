@@ -53,12 +53,25 @@ package leetcode.editor.cn;
 public class ContainerWithMostWater {
     public static void main(String[] args) {
         Solution solution = new ContainerWithMostWater().new Solution();
+        int[] ints = {2, 3, 4, 5, 1, 6, 3};
+        int i = solution.maxArea(ints);
+        System.out.println(i);
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int maxArea(int[] height) {
+            int i = 0;
+            int j = height.length-1;
+            int res =0;
 
+            while (i<j){
+               int currentres =  height[i]<height[j]?
+                       (j-i)*height[i++]:(j-i)*height[j--];
+
+               res = Math.max(res,currentres);
+            }
+            return res;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)

@@ -24,4 +24,13 @@ public class ListNode {
         val = ints[0];
         next = head.next;
     }
+
+    public static ListNode buildListNode(ListNode listNode,int temp,int... a){
+        if (temp>=a.length){
+            return listNode;
+        }
+        listNode.next = new ListNode(a[temp++]);
+        buildListNode(listNode.next,temp,a);
+        return listNode;
+    }
 }

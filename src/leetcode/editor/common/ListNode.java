@@ -14,23 +14,30 @@ public class ListNode {
         this.next = next;
     }
 
-    public ListNode(int[] ints) {
-        ListNode head = new ListNode(0), current = head;
-        for (int i = 1; i < ints.length; i++) {
-            ListNode listNode = new ListNode(ints[i]);
-            current.next = listNode;
-            current = current.next;
-        }
-        val = ints[0];
-        next = head.next;
+    public ListNode(int... ints) {
+        ListNode listNode = buildListNode(new ListNode(0), 0, ints);
+        this.val = listNode.val;
+        this.next = listNode.next;
     }
 
-    public static ListNode buildListNode(ListNode listNode,int temp,int... a){
-        if (temp>=a.length){
+    public static ListNode buildListNode(ListNode listNode, int temp, int... a) {
+        if (temp >= a.length) {
             return listNode;
         }
         listNode.next = new ListNode(a[temp++]);
-        buildListNode(listNode.next,temp,a);
-        return listNode;
+        buildListNode(listNode.next, temp, a);
+        return listNode.next;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(val);
+        ListNode tempNode = new ListNode(val, next);
+        while (tempNode.next != null) {
+            stringBuilder.append("->").append(tempNode.next.val);
+            tempNode = tempNode.next;
+        }
+        return stringBuilder.toString();
     }
 }

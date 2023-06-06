@@ -311,6 +311,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/FindTheIndexOfTheFirstOccurrenceInAString_28.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/FindTheIndexOfTheFirstOccurrenceInAString_28.md" />
+              <option name="frontendQuestionId" value="leetcode.cn28" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/FindTheIndexOfTheFirstOccurrenceInAString_28.java" />
+              <option name="titleSlug" value="find-the-index-of-the-first-occurrence-in-a-string" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/FirstBadVersion_278.java">
           <value>
             <LeetcodeEditor>
@@ -391,11 +402,11 @@
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ImplementStrstr.java">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/ImplementStrstr.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/FindTheIndexOfTheFirstOccurrenceInAString_28.md" />
               <option name="frontendQuestionId" value="leetcode.cn28" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/ImplementStrstr.java" />
-              <option name="titleSlug" value="implement-strstr" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/FindTheIndexOfTheFirstOccurrenceInAString_28.java" />
+              <option name="titleSlug" value="find-the-index-of-the-first-occurrence-in-a-string" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -490,10 +501,21 @@
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/LetterCombinationsOfAPhoneNumber.java">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/LetterCombinationsOfAPhoneNumber.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/LetterCombinationsOfAPhoneNumber_17.md" />
               <option name="frontendQuestionId" value="leetcode.cn17" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/LetterCombinationsOfAPhoneNumber.java" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/LetterCombinationsOfAPhoneNumber_17.java" />
+              <option name="titleSlug" value="letter-combinations-of-a-phone-number" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/LetterCombinationsOfAPhoneNumber_17.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/LetterCombinationsOfAPhoneNumber_17.md" />
+              <option name="frontendQuestionId" value="leetcode.cn17" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/LetterCombinationsOfAPhoneNumber_17.java" />
               <option name="titleSlug" value="letter-combinations-of-a-phone-number" />
             </LeetcodeEditor>
           </value>
@@ -674,6 +696,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/NQueens_51.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/NQueens_51.md" />
+              <option name="frontendQuestionId" value="leetcode.cn51" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/NQueens_51.java" />
+              <option name="titleSlug" value="n-queens" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/NumberOfIslands_200.java">
           <value>
             <LeetcodeEditor>
@@ -737,6 +770,17 @@
               <option name="host" value="leetcode.cn" />
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/Permutations_46.java" />
               <option name="titleSlug" value="permutations" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/PermutationsIi_47.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/PermutationsIi_47.md" />
+              <option name="frontendQuestionId" value="leetcode.cn47" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/PermutationsIi_47.java" />
+              <option name="titleSlug" value="permutations-ii" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -897,10 +941,21 @@
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ReverseInteger.java">
           <value>
             <LeetcodeEditor>
-              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/ReverseInteger.md" />
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/ReverseInteger_7.md" />
               <option name="frontendQuestionId" value="leetcode.cn7" />
               <option name="host" value="leetcode.cn" />
-              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/ReverseInteger.java" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/ReverseInteger_7.java" />
+              <option name="titleSlug" value="reverse-integer" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ReverseInteger_7.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/leetcode/editor/cn/doc/content/ReverseInteger_7.md" />
+              <option name="frontendQuestionId" value="leetcode.cn7" />
+              <option name="host" value="leetcode.cn" />
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/ReverseInteger_7.java" />
               <option name="titleSlug" value="reverse-integer" />
             </LeetcodeEditor>
           </value>

@@ -41,9 +41,8 @@
 package leetcode.editor.cn;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-
-import static jdk.nashorn.internal.runtime.UnwarrantedOptimismException.isValid;
 
 /**
  * N 皇后
@@ -86,10 +85,10 @@ public class NQueens_51 {
                 return;
             }
             //col控制棋盘的列，每次都从新的一行的起始位置开始搜索
-            for (int col = 0;col < n; ++col) {
-                if (isValid (row, col, n, chessboard)) { //第row行，第col个位置放皇后是否合法
+            for (int col = 0; col < n; ++col) {
+                if (isValid(row, col, n, chessboard)) { //第row行，第col个位置放皇后是否合法
                     chessboard[row][col] = 'Q';  //合法的话放皇后
-                    backTrack(n, row+1, chessboard); //下次遍历第二行
+                    backTrack(n, row + 1, chessboard); //下次遍历第二行
                     chessboard[row][col] = '.';   //回溯
                 }
             }
@@ -113,7 +112,7 @@ public class NQueens_51 {
 
         public boolean isValid(int row, int col, int n, char[][] chessboard) {
             // 检查列--遍历的是行
-            for (int i=0; i<row; ++i) { // 相当于剪枝
+            for (int i = 0; i < row; ++i) { // 相当于剪枝
                 if (chessboard[i][col] == 'Q') {
                     return false;
                 }
@@ -123,7 +122,7 @@ public class NQueens_51 {
             //通过 i-- 和 j-- 的方式，在每次迭代中将 i 和 j 分别递减，以便沿着45度对角线向上和向左移动。
             //我们可以在第一次迭代时检查 (row-1, col-1) 的位置是否为皇后。然后，通过每次迭代递减 i 和 j，我们可以依次检查上方和左侧的位置，直到到达棋盘的边界。
             //循环的终止条件是 i>=0 && j>=0，这意味着只要 i 和 j 中有一个小于0，循环就会停止。这是为了确保我们只检查到达或越过棋盘边界之前的位置。
-            for (int i=row-1, j=col-1; i>=0 && j>=0; i--, j--) {
+            for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
                 if (chessboard[i][j] == 'Q') {
                     return false;
                 }
@@ -133,7 +132,7 @@ public class NQueens_51 {
             //通过 i-- 和 j++ 的方式，在每次迭代中将 i 递减、j 递增，以便沿着135度对角线向上和向右移动。
             //我们可以在第一次迭代时检查 (row-1, col+1) 的位置是否为皇后。然后，通过每次迭代递减 i 和递增 j，我们可以依次检查上方和右侧的位置，直到到达棋盘的边界。
             //在这段代码中，j 代表列数，而 n 是棋盘的大小，即棋盘的列数。因为数组索引是从0开始的，所以棋盘的列数是从0到n-1。在循环中，我们希望在沿着135度对角线向上和向右移动时，j 的值不会超过棋盘的列数。因此，循环条件中使用 j <= n-1 来确保 j 的值在有效的列范围内。如果不将条件写为 j <= n-1，而是 j < n，当 j 的值等于 n 时，循环将停止。这可能会导致在检查对角线时遗漏最右边的列。
-            for (int i=row-1, j=col+1; i>=0 && j<=n-1; i--, j++) {
+            for (int i = row - 1, j = col + 1; i >= 0 && j <= n - 1; i--, j++) {
                 if (chessboard[i][j] == 'Q') {
                     return false;
                 }

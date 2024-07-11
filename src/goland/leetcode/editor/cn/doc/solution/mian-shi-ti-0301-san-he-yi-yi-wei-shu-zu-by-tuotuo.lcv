@@ -1,0 +1,179 @@
+### 解题思路
+
+py和go用最前或最后4个元素存下容量，以及各个栈的栈顶坐标，rs因为下标和数据不是同一个类型，所以只能另存下标。
+
+### 代码
+
+* []
+
+```python
+class TripleInOne:
+    def __init__(self, stackSize: int):
+        self.d = [4, 5, 6, stackSize * 3 + 3] + [0] * stackSize * 3
+
+    def push(self, stackNum: int, value: int) -> None:
+        if self.d[stackNum] <= self.d[3]:
+            self.d[self.d[stackNum]] = value
+            self.d[stackNum] += 3
+
+    def pop(self, stackNum: int) -> int:
+        if self.d[stackNum] > 6:
+            self.d[stackNum] -= 3
+            return self.d[self.d[stackNum]]
+        return -1
+
+    def peek(self, stackNum: int) -> int:
+        return self.d[stackNum] <= 6 and -1 or self.d[self.d[stackNum] - 3]
+
+    def isEmpty(self, stackNum: int) -> bool:
+        return self.d[stackNum] <= 6
+```
+
+* []
+
+```python
+class TripleInOne:
+    def __init__(self, stackSize: int):
+        self.d = [0] * stackSize * 3 + [stackSize * 3, 2, 1, 0]
+
+    def push(self, stackNum: int, value: int) -> None:
+        if self.d[~stackNum] < self.d[~3]:
+            self.d[self.d[~stackNum]] = value
+            self.d[~stackNum] += 3
+
+    def pop(self, stackNum: int) -> int:
+        if self.d[~stackNum] >= 3:
+            self.d[~stackNum] -= 3
+            return self.d[self.d[~stackNum]]
+        return -1
+
+    def peek(self, stackNum: int) -> int:
+        return self.d[~stackNum] < 3 and -1 or self.d[self.d[~stackNum] - 3]
+
+    def isEmpty(self, stackNum: int) -> bool:
+        return self.d[~stackNum] < 3
+```
+
+* []
+
+```golang
+type TripleInOne struct {
+    d []int
+}
+
+func Constructor(stackSize int) TripleInOne {
+    d := make([]int, stackSize * 3 + 4)
+    copy(d, []int{4, 5, 6, stackSize * 3 + 3})
+    return TripleInOne{d}
+}
+
+func (this *TripleInOne) Push(stackNum int, value int)  {
+    if this.d[stackNum] <= this.d[3] {
+        this.d[this.d[stackNum]] = value
+        this.d[stackNum] += 3
+    }
+}
+
+func (this *TripleInOne) Pop(stackNum int) int {
+    if this.d[stackNum] > 6 {
+        this.d[stackNum] -= 3
+        return this.d[this.d[stackNum]]
+    }
+    return -1
+}
+
+func (this *TripleInOne) Peek(stackNum int) int {
+    if this.d[stackNum] <= 6 {
+        return -1
+    }
+    return this.d[this.d[stackNum] - 3]
+}
+
+func (this *TripleInOne) IsEmpty(stackNum int) bool {
+    return this.d[stackNum] <= 6
+}
+```
+
+* []
+
+```golang
+type TripleInOne struct {
+    d []int
+}
+
+func Constructor(stackSize int) TripleInOne {
+    return TripleInOne{append(make([]int, stackSize * 3), stackSize * 3, 2, 1, 0)}
+}
+
+func (this *TripleInOne) Push(stackNum int, value int)  {
+    if this.d[len(this.d) + ^stackNum] < this.d[len(this.d) + ^3] {
+        this.d[this.d[len(this.d) + ^stackNum]] = value
+        this.d[len(this.d) + ^stackNum] += 3
+    }
+}
+
+func (this *TripleInOne) Pop(stackNum int) int {
+    if this.d[len(this.d) + ^stackNum] >= 3 {
+        this.d[len(this.d) + ^stackNum] -= 3
+        return this.d[this.d[len(this.d) + ^stackNum]]
+    }
+    return -1
+}
+
+func (this *TripleInOne) Peek(stackNum int) int {
+    if this.d[len(this.d) + ^stackNum] < 3 {
+        return -1
+    }
+    return this.d[this.d[len(this.d) + ^stackNum] - 3]
+}
+
+func (this *TripleInOne) IsEmpty(stackNum int) bool {
+    return this.d[len(this.d) + ^stackNum] < 3
+}
+
+```
+
+* []
+
+```rust
+struct TripleInOne {
+    d: Vec<i32>,
+    i: [usize; 3]
+}
+
+impl TripleInOne {
+    fn new(stackSize: i32) -> Self {
+        Self {
+            d: vec![0; 3 * stackSize as usize],
+            i: [0, 1, 2]
+        }
+    }
+    
+    fn push(&mut self, stack_num: i32, value: i32) {
+        let n = stack_num as usize;
+        if self.i[n] < self.d.len() {
+            self.d[self.i[n]] = value;
+            self.i[n] += 3;
+        }
+    }
+    
+    fn pop(&mut self, stack_num: i32) -> i32 {
+        match stack_num as usize {
+            n if self.i[n] >= 3 => {
+                self.i[n] -= 3;
+                self.d[self.i[n]]
+            },
+            _ => -1
+        }
+    }
+    
+    fn peek(&self, stack_num: i32) -> i32 {
+        if self.i[stack_num as usize] >= 3 {self.d[self.i[stack_num as usize] - 3]} else {-1}
+    }
+    
+    fn is_empty(&self, stack_num: i32) -> bool {
+        self.i[stack_num as usize] < 3
+    }
+}
+```
+
